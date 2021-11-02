@@ -1,26 +1,32 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
+import './statics.scss'
 
 const Statistics = (props) => {
   const {title, stats} = props;
 
   return (
-    <section class="statistics">
-      <h2 class="title">{title}</h2>
-      <ul class="stat-list">
-      {stats.map(e => <ListItem e = {e} />)}
+    <section className="statistics">
+      <h2 className="title">{title}</h2>
+      <ul className="stat-list">
+        {stats.map(e => <ListItem key={e.id } e = {e} />)}
       </ul>
     </section>
   )
+}
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired
 }
 
 export default Statistics;
 
 const ListItem = ({e}) => {
   return (
-    <li id = {e.id} class="item">
-    <span class="label">{e.label}</span>
-    <span class="percentage">{e.percentage}</span>
+    <li key = {e.id} className="item">
+    <span className="label">{e.label}</span>
+    <span className="percentage">{e.percentage}</span>
   </li>
   );
 }

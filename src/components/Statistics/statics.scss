@@ -1,0 +1,42 @@
+
+.statistics {
+  margin: 0 auto;
+  background-color: rgb(104, 187, 241);
+  width: 280px;
+}
+
+.title {
+margin: 0;
+padding: 10px;
+text-align: center;
+}
+
+.item {
+  list-style: none;
+}
+.stat-list {
+  list-style: none;
+  display: inline-flex;
+  padding: 0 10px 10px 10px;
+  margin: 0;
+}
+
+.stat-list > .item {
+margin: 0;
+padding: 10px;
+}
+.label {
+
+}
+
+.percentage {
+display: block;
+}
+
+.stat-list>.item:nth-child(2n+1) {
+ background-color: rgb(219, 59, 59);
+}
+
+.stat-list>.item:nth-child(2n) {
+  background-color: rgb(19, 204, 81);
+}

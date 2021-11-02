@@ -2,14 +2,17 @@
   border-radius: 10px;
   width: 250px;
   height: 400px;
+  margin: auto;
 };
 
 .description {
-background-color: red;
+background-color: rgb(223, 213, 213);
+display: inline-block;
+padding: 30px;
 }
 
 .name {
-font-style: italic;
+font-weight: bold;
 };
 
 .tag {
@@ -21,11 +24,23 @@ font-style: italic;
 }
 
 .avatar {
-  width: 100px;
+  width: 80px;
   height: 50px;
+  border-radius: 50%;
 }
 
 .stats {
+  background-color: rgb(121, 110, 110);
   list-style: none;
+  display: inline-flex;
+  padding: 11px;
+  margin: 0 20px 20px 0px;
 }
 
+.item {
+  margin-right: 10px;
+}
+
+.quantity {
+  font-weight: bold;
+}

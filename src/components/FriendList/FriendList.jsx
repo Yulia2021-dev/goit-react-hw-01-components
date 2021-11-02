@@ -1,9 +1,10 @@
 import React from 'react';
+import './friendList.scss'
 
 const FriendList = ({ friends }) => {
   return (
-    <ul>
-      {friends.map(friend => <ListItem friend = {friend}/>)}
+    <ul className = "friend-list">
+      {friends.map(friend => <ListItem key={friend.id} friend = {friend}/>)}
     </ul>
   )
 }

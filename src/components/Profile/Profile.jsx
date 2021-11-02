@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import './Profile.scss'
 
 const Profile = ({user}) => {
@@ -39,12 +39,7 @@ const Profile = ({user}) => {
 };
 
 Profile.propTypes = {
-  name: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  stats: PropTypes.node
-};
-
+  user: PropTypes.object.isRequired,
+}
 
 export default Profile;
