@@ -40,6 +40,11 @@ const Profile = ({user}) => {
 
 Profile.propTypes = {
   user: PropTypes.object.isRequired,
-}
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired, 
+  tag: PropTypes.string.isRequired, 
+  location: PropTypes.string.isRequired, 
+  stats: PropTypes.node,
+};
 
 export default Profile;
