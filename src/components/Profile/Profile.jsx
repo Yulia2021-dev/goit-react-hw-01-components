@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import './Profile.scss'
 
-const Profile = ({user}) => {
-  const { avatar, name, tag, location, stats } = user;
+const Profile = ({ username, avatar, tag, location, stats }) => {
   const { followers, views, likes } = stats;
 
   return (
@@ -15,7 +14,7 @@ const Profile = ({user}) => {
           width="100px"
           height="100px"
           />
-          <p className="name">{name}</p>
+          <p className="name">{username}</p>
           <p className="tag">@{tag}</p>
           <p className="location">{location}</p>
         </div>        
@@ -39,12 +38,11 @@ const Profile = ({user}) => {
 };
 
 Profile.propTypes = {
-  user: PropTypes.object.isRequired,
   avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired, 
+  username: PropTypes.string.isRequired, 
   tag: PropTypes.string.isRequired, 
   location: PropTypes.string.isRequired, 
-  stats: PropTypes.node,
+  stats: PropTypes.object,
 };
 
 export default Profile;

@@ -12,11 +12,17 @@ import "./App.css";
 import "./index.css";
 
 const App = () => {
-  const userJson = profileJson;
+  const { username, tag, location, avatar, stats } = profileJson;
   const statisticalData = statisticalDataJson;
   return (
     <>
-      <Profile user={userJson} />
+      <Profile
+        username={username}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        stats={stats}
+      />
       <Statistics title="Upload stats" stats={statisticalData} />
       <FriendList friends={friendsJson} />
       <TransactionHistory transactions={transactionJson} />
